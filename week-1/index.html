@@ -29,6 +29,7 @@
       <br />
       <button type="button" value="submit" onclick="readForm()">Submit</button>
     </form>
+    <div id="time"></div>
     <div id="timezone-user"></div>
 
     <script type="text/javascript">
@@ -42,6 +43,18 @@
         }
         document.getElementById('timezone-user').innerHTML = option;
       }
+      
+      function printDate(){
+          let currentTime = new Date();
+          let hour = currentTime.getHours();
+          let minute = currentTime.getMinutes();
+          let seconds = currentTime.getSeconds();
+          let session = hour >= 11 ? "pm" : "am";
+          let time = hour + ":" + minute + ":" + seconds + session;
+          document.getElementById("time").innerHTML=time;
+          setTimeout(printDate,1000) 
+      }
+      printDate();
     </script>
     
   </body>
