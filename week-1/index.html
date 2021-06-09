@@ -32,7 +32,6 @@
     <div id="time"></div>
     <div id="timezone-user"></div>
 
-
     <script type="text/javascript">
       function readForm() {
         let radioButtons = document.getElementsByName('timezone');
@@ -44,6 +43,7 @@
         }
         document.getElementById('timezone-user').innerHTML = option;
       }
+      
       function printDate(){
           let currentTime = new Date();
           let hour = currentTime.getHours();
@@ -56,5 +56,6 @@
       }
       printDate();
     </script>
+    
   </body>
 </html>
