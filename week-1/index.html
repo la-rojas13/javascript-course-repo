@@ -12,8 +12,8 @@
       <input id="est" name="timezone" type="radio" value="est" />
       <label for="est">Eastern time</label>
       <br />
-      <input id="cet" name="timezone" type="radio" value="cet" />
-      <label for="cet">Central Standard time</label>
+      <input id="cst" name="timezone" type="radio" value="cst" />
+      <label for="cst">Central Standard time</label>
       <br />
       <input id="mst" name="timezone" type="radio" value="mst" />
       <label for="mst">Mountain Standard time</label>
@@ -27,8 +27,22 @@
       <input id="hst" name="timezone" type="radio" value="hst" />
       <label for="hst">Hawaii-Aletuian Standard time</label>
       <br />
-      <button type="button" value="submit">Submit</button>
+      <button type="button" value="submit" onclick="readForm()">Submit</button>
     </form>
     <div id="timezone-user"></div>
+
+    <script type="text/javascript">
+      function readForm() {
+        let radioButtons = document.getElementsByName('timezone');
+        let option = radioButtons[0].value;
+        for (var i = 0; i < radioButtons.length; i++) {
+          if (radioButtons[i].checked == true) {
+            option = radioButtons[i].value;
+          }
+        }
+        document.getElementById('timezone-user').innerHTML = option;
+      }
+    </script>
+    
   </body>
 </html>
