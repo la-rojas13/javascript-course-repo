@@ -21,3 +21,18 @@ body {
               0 20px 20px rgba(0,0,0,.1),
               0 0 0 4px rgba(255,255,255,1);
 }
+.timezone{
+    margin-bottom: 3px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #102;
+    color: white;
+}
