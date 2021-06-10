@@ -10,24 +10,31 @@
   <body>
     <form>
       <h2>Select timezone:</h2>
-      <input id="est" name="timezone" type="radio" value="est" />
-      <label for="est">Eastern time</label>
-      <br />
+      <div class="timezone">
+        <input id="est" name="timezone" type="radio" value="est" />
+      <label for="est">Eastern time</label>  
+      </div>
+    <div class="timezone">
       <input id="cst" name="timezone" type="radio" value="cst" />
       <label for="cst">Central Standard time</label>
-      <br />
-      <input id="mst" name="timezone" type="radio" value="mst" />
+    </div>
+<div class="timezone">
+  <input id="mst" name="timezone" type="radio" value="mst" />
       <label for="mst">Mountain Standard time</label>
-      <br />
-      <input id="pst" name="timezone" type="radio" value="pst" />
+</div>
+      
+ <div class="timezone">
+    <input id="pst" name="timezone" type="radio" value="pst" />
       <label for="pst">Pacific Standard time</label>
-      <br />
-      <input id="ast" name="timezone" type="radio" value="ast" />
+ </div>
+     <div class="timezone">
+       <input id="ast" name="timezone" type="radio" value="ast" />
       <label for="ast">Alaska Standard time</label>
-      <br />
-      <input id="hst" name="timezone" type="radio" value="hst" />
+     </div>
+      <div class="timezone">
+        <input id="hst" name="timezone" type="radio" value="hst" />
       <label for="hst">Hawaii-Aletuian Standard time</label>
-      <br />
+      </div>
       <br>
       <button type="button" value="submit" onclick="readForm()">Submit</button>
     </form>
