@@ -1,3 +1,4 @@
+setInterval(showTime, 1000)
 let offset = 0;
 
 function readForm() {
@@ -34,14 +35,25 @@ function readForm() {
   document.getElementById('timezone-user').innerHTML = option;
 }
 
-function printDate() {
-  let currentTime = new Date();
-  let hour = currentTime.getHours();
-  let minute = currentTime.getMinutes();
-  let seconds = currentTime.getSeconds();
-  let session = hour >= 11 ? 'pm' : 'am';
-  let time = hour + offset + ':' + minute + ':' + seconds + session;
-  //document.getElementById('time').innerHTML = time;
-  setTimeout(printDate, 1000);
+function showTime()
+{
+  const day = new Date();
+  const secondsRatio = day.getSeconds()/60;
+  const minutesRatio = (day.getMinutes() + secondsRatio)/60;
+  const hoursRatio = (day.getHours() + minutesRatio + offset) /12;
+  
+  const hourHand = document.querySelector('[data-hour-hand');
+  const minuteHand = document.querySelector('[data-minute-hand');
+  const secondHand = document.querySelector('[data-second-hand');
+  
+  setRotation(secondHand, secondsRatio);
+  setRotation(minuteHand, minutesRatio);
+  setRotation(hourHand, hoursRatio);
 }
-printDate();
+
+function setRotation(element, rotationRatio){
+  element.style.setProperty(`--rotation`, rotationRatio *360);
+}
+
+
+showTime();
