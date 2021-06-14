@@ -65,5 +65,18 @@ function printDate() {
   document.getElementById('digital clock').innerHTML = time;
   setTimeout(printDate, 1000);
 }
+const digital = document.getElementById("digital clock")
+const analog = document.getElementById("time")
+
+function setDigital(){
+  analog.style.display= "none";
+  digital.style.display = "flex";
+}
+function setAnalog(){
+  analog.style.display= "flex";
+  digital.style.display = "none";
+}
+
 printDate();
 showTime();
+setAnalog();
