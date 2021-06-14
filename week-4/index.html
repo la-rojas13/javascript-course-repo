@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hello World!</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Hello World!</title>
-</head>
+  <body>
+    <form>
+      <h2>Select timezone:</h2>
+      <div class="timezone">
+        <input id="est" name="timezone" type="radio" value="est" />
+        <label for="est">Eastern time</label>
+      </div>
+      <div class="timezone">
+        <input id="cst" name="timezone" type="radio" value="cst" />
+        <label for="cst">Central Standard time</label>
+      </div>
+      <div class="timezone">
+        <input id="mst" name="timezone" type="radio" value="mst" />
+        <label for="mst">Mountain Standard time</label>
+      </div>
 
-<body>
-  <form>
-    <h2>Select timezone:</h2>
-    <div class="timezone">
-      <input id="est" name="timezone" type="radio" value="est" />
-      <label for="est">Eastern time</label>
-    </div>
-    <div class="timezone">
-      <input id="cst" name="timezone" type="radio" value="cst" />
-      <label for="cst">Central Standard time</label>
-    </div>
-    <div class="timezone">
-      <input id="mst" name="timezone" type="radio" value="mst" />
-      <label for="mst">Mountain Standard time</label>
-    </div>
+      <div class="timezone">
+        <input id="pst" name="timezone" type="radio" value="pst" />
+        <label for="pst">Pacific Standard time</label>
+      </div>
+      <div class="timezone">
+        <input id="ast" name="timezone" type="radio" value="ast" />
+        <label for="ast">Alaska Standard time</label>
+      </div>
+      <div class="timezone">
+        <input id="hst" name="timezone" type="radio" value="hst" />
+        <label for="hst">Hawaii-Aletuian Standard time</label>
+      </div>
+      <br />
+      <button type="button" value="submit" onclick="readForm()">Submit</button>
+    </form>
+    <form>
+      <div class="view">
+        <input id="digital" name="view" type="radio" value="digital" />
+        <label for="digital">Digital</label>
+        <br>
+        <input id="analog" name="view" type="radio" value="analog" />
+        <label for="analog">Analog</label>
+        <br>
+      </div>
+    </form>
 
-    <div class="timezone">
-      <input id="pst" name="timezone" type="radio" value="pst" />
-      <label for="pst">Pacific Standard time</label>
-    </div>
-    <div class="timezone">
-      <input id="ast" name="timezone" type="radio" value="ast" />
-      <label for="ast">Alaska Standard time</label>
-    </div>
-    <div class="timezone">
-      <input id="hst" name="timezone" type="radio" value="hst" />
-      <label for="hst">Hawaii-Aletuian Standard time</label>
-    </div>
-    <br />
-    <button type="button" value="submit" onclick="readForm()">Submit</button>
-  </form>
-  <!--<br />
+    <!--<br />
     <div id="timezone-user"></div>>-->
-  <br />
-  <div id="time" class="clock">
-    <div class="hand hour" data-hour-hand></div>
-    <div class="hand minute" data-minute-hand></div>
-    <div class="hand second" data-second-hand></div>
-    <div class="number number1">1</div>
-    <div class="number number2">2</div>
-    <div class="number number3">3</div>
-    <div class="number number4">4</div>
-    <div class="number number5">5</div>
-    <div class="number number6">6</div>
-    <div class="number number7">7</div>
-    <div class="number number8">8</div>
-    <div class="number number9">9</div>
-    <div class="number number10">10</div>
-    <div class="number number11">11</div>
-    <div class="number number12">12</div>
-  </div>
-  <div class="digital" id="digital clock"></div>
-  <script defer src="script.js"></script>
-</body>
-
+    <br />
+    <div id="time" class="clock">
+      <div class="hand hour" data-hour-hand></div>
+      <div class="hand minute" data-minute-hand></div>
+      <div class="hand second" data-second-hand></div>
+      <div class="number number1">1</div>
+      <div class="number number2">2</div>
+      <div class="number number3">3</div>
+      <div class="number number4">4</div>
+      <div class="number number5">5</div>
+      <div class="number number6">6</div>
+      <div class="number number7">7</div>
+      <div class="number number8">8</div>
+      <div class="number number9">9</div>
+      <div class="number number10">10</div>
+      <div class="number number11">11</div>
+      <div class="number number12">12</div>
+    </div>
+    <div class="digital" id="digital clock"></div>
+    <script defer src="script.js"></script>
+  </body>
 </html>
